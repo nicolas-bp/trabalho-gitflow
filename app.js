@@ -5,20 +5,21 @@ const elDecrement = document.getElementById("btn-decrement");
 const elToggleTheme = document.getElementById("btn-toggle-theme");
 const elTitle = document.getElementById("title");
 
-function setCount(newValue) {
-  elCount.textContent = String(newValue);
+function updateCount(newValue) {
+  state.count = newValue;
+  elCount.textContent = String(state.count);
 }
 
 let state = { count: 0, dark: false };
 
 elIncrement.addEventListener("click", () => {
-  state.count += 1;
-  setCount(state.count);
+  state.count += 2;
+  updateCount(state.count);
 });
 
 elDecrement.addEventListener("click", () => {
   state.count -= 1;
-  setCount(state.count);
+  updateCount(state.count);
 });
 
 elToggleTheme.addEventListener("click", () => {
@@ -27,4 +28,5 @@ elToggleTheme.addEventListener("click", () => {
   document.documentElement.style.setProperty("--text", state.dark ? "#e2e8f0" : "#0f172a");
   elTitle.textContent = state.dark ? "Mini App – Modo Escuro" : "Mini App – GitFlow";
   elToggleTheme.setAttribute("aria-pressed", String(state.dark));
+  elToggleTheme.textContent = state.dark ? "Modo Claro" : "Modo Escuro";
 });

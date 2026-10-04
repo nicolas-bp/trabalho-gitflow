@@ -18,4 +18,4 @@ Basta abrir `index.html` no navegador.
 - `docs/release-notes.md`
 
 ## Créditos
-- Aluno A (owner), Aluno B, Aluno C.
+- Nicolas Barbosa Pereira (owner), Thiago Juvencio Gomes, Henrique Alves Rocha.

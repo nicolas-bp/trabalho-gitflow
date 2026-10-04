@@ -26,7 +26,7 @@ elToggleTheme.addEventListener("click", () => {
   state.dark = !state.dark;
   document.documentElement.style.setProperty("--bg", state.dark ? "#0b1220" : "#f8fafc");
   document.documentElement.style.setProperty("--text", state.dark ? "#e2e8f0" : "#0f172a");
-  elTitle.textContent = state.dark ? "Mini App – Modo Escuro" : "Mini App – Modo Escuro";
+  elTitle.textContent = state.dark ? "Mini App – Modo Escuro" : "Mini App – GitFlow";
   elToggleTheme.setAttribute("aria-pressed", String(state.dark));
   elToggleTheme.textContent = state.dark ? "Modo Claro" : "Modo Escuro";
 });
